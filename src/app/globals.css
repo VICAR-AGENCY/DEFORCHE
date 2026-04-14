@@ -32,8 +32,8 @@
   --font-heading: "MetaBoldLF", sans-serif;
 
   /* Border radius */
-  --radius-sm: 2px;
-  --radius-md: 4px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
 }
 
 body {
@@ -78,4 +78,18 @@ main > section {
 
 main > section:last-child {
   border-bottom: none;
+}
+
+/* Afbeeldingen en containers */
+img {
+  border-radius: 10px;
+}
+
+.overflow-hidden {
+  border-radius: 10px;
+}
+
+/* Knoppen en links die als knop stijlen */
+a[class*="bg-"], button {
+  border-radius: 4px;
 }
