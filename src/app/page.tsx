@@ -74,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* ── DIENSTEN GRID ── */}
-      <section className="bg-(--color-gray-light) !py-0">
+      <section className="bg-white">
         <DienstenGrid />
       </section>
 
