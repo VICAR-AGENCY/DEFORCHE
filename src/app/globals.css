@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "MetaBoldLF";
+  src: url("/fonts/MetaBoldLF-Roman.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/fonts/Helvetica.ttc") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Colors */
+  --color-primary: #f5d000;
+  --color-primary-hover: #e0bc00;
+  --color-dark: #1a1a1a;
+  --color-dark-secondary: #2d2d2d;
+  --color-gray-light: #f4f4f4;
+  --color-gray-mid: #e0e0e0;
+  --color-gray-text: #6b6b6b;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-sans: "Helvetica", "Helvetica Neue", Arial, sans-serif;
+  --font-heading: "MetaBoldLF", sans-serif;
+
+  /* Border radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-dark);
+  font-family: var(--font-sans);
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  body { font-size: 18px; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+h1, h2 {
+  font-size: 28px;
+}
+
+@media (min-width: 768px) {
+  h1, h2 { font-size: 36px; }
+}
+
+@media (min-width: 1024px) {
+  h1, h2 { font-size: 42px; }
+}
+
+main > section {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-dark);
+}
+
+@media (min-width: 768px) {
+  main > section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+main > section:last-child {
+  border-bottom: none;
+}
