@@ -13,40 +13,42 @@ export default function Home() {
   return (
     <main>
       {/* ── HERO ── */}
-      <section className="bg-white text-center px-6">
-        <h1 className="font-bold text-(--color-dark) leading-tight max-w-2xl mx-auto">
-          Precision in<br />every connection
-        </h1>
-        <p className="mt-4 text-(--color-gray-text) leading-relaxed max-w-xl mx-auto">
-          Van industriële elektriciteit tot hoogspanning en automatisatie wij ontwerpen, bouwen en installeren betrouwbare systemen voor kritische omgevingen.
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-(--color-primary) text-(--color-dark) font-bold text-sm px-5 py-2.5 hover:bg-(--color-primary-hover) transition-colors"
-          >
-            <Bliksem />
-            Offerte aanvragen
-          </Link>
-          <Link
-            href="/over-ons"
-            className="inline-flex items-center gap-2 border border-(--color-dark) text-(--color-dark) font-bold text-sm px-5 py-2.5 hover:bg-(--color-gray-light) transition-colors"
-          >
-            Over ons
-          </Link>
-        </div>
-        <div className="relative mt-10 mx-auto max-w-6xl h-48 md:h-72 lg:h-[420px] overflow-hidden">
-          <Image
-            src="/images/Rectangle 8684.png"
-            alt="Deforche elektrische installatie"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div className="flex items-center justify-center gap-3 py-4 text-sm text-(--color-gray-text)">
-          <span>Vertrouwd door +50 klanten</span>
-          <Image src="/images/Frame 1000005822.png" alt="Klant logos" width={60} height={24} className="object-contain" />
+      <section className="bg-white px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="font-bold text-(--color-dark) leading-tight max-w-2xl mx-auto">
+            Precision in<br />every connection
+          </h1>
+          <p className="mt-4 text-(--color-gray-text) leading-relaxed max-w-xl mx-auto">
+            Van industriële elektriciteit tot hoogspanning en automatisatie wij ontwerpen, bouwen en installeren betrouwbare systemen voor kritische omgevingen.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-(--color-primary) text-(--color-dark) font-bold text-sm px-5 py-2.5 hover:bg-(--color-primary-hover) transition-colors"
+            >
+              <Bliksem />
+              Offerte aanvragen
+            </Link>
+            <Link
+              href="/over-ons"
+              className="inline-flex items-center gap-2 border border-(--color-dark) text-(--color-dark) font-bold text-sm px-5 py-2.5 hover:bg-(--color-gray-light) transition-colors"
+            >
+              Over ons
+            </Link>
+          </div>
+          <div className="relative mt-10 h-48 md:h-72 lg:h-[420px] overflow-hidden">
+            <Image
+              src="/images/Rectangle 8684.png"
+              alt="Deforche elektrische installatie"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="flex items-center justify-center gap-3 py-4 text-sm text-(--color-gray-text)">
+            <span>Vertrouwd door +50 klanten</span>
+            <Image src="/images/Frame 1000005822.png" alt="Klant logos" width={60} height={24} className="object-contain" />
+          </div>
         </div>
       </section>
 

@@ -13,7 +13,8 @@ export default function OverOnsPage() {
     <main>
       {/* ── HERO FOTO ── */}
       <section className="bg-white px-6">
-        <div className="relative mx-auto max-w-6xl h-56 md:h-[420px] overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+        <div className="relative h-56 md:h-[420px] overflow-hidden">
           <Image
             src="/images/Rectangle 8687-3.png"
             alt="Deforche Schakeltechniek gebouw"
@@ -25,6 +26,7 @@ export default function OverOnsPage() {
         <div className="flex items-center justify-center gap-3 pt-4 text-sm text-(--color-gray-text)">
           <span>Vertrouwd door +50 klanten</span>
           <Image src="/images/Frame 1000005822.png" alt="Klant logos" width={60} height={24} className="object-contain" />
+        </div>
         </div>
       </section>
 
