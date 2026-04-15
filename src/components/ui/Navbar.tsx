@@ -8,7 +8,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-white sticky top-0 z-50">
+    <header className="bg-white sticky top-0 z-50" style={{borderBottom: "0.5px solid #D0D0D0"}}>
       <div className="max-w-7xl mx-auto flex items-center justify-between py-[30px]">
         <Link href="/" className="flex-shrink-0" onClick={() => setOpen(false)}>
           <Image
