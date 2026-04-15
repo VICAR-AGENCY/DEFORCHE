@@ -29,7 +29,7 @@ export default function DienstenGrid() {
           <svg
             viewBox="0 0 10 14"
             fill="none"
-            className="absolute -right-8 -bottom-4 w-48 h-64"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[800px] w-auto"
             style={{color: "#FAF235"}}
           >
             <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor"/>
