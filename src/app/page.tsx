@@ -111,7 +111,7 @@ export default function Home() {
       </section>
 
       {/* ── NIEUWS ── */}
-      <section className="bg-(--color-gray-light) px-6">
+      <section className="bg-white px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center justify-center gap-1.5">
             <Bliksem className="text-(--color-primary)" /> Nieuws
@@ -127,7 +127,10 @@ export default function Home() {
               Meer nieuws
             </Link>
           </p>
-          <NieuwsGrid items={nieuwsData.slice(0, 3)} />
+          <NieuwsGrid items={nieuwsData.slice(0, 3).map((item, i) => ({
+            ...item,
+            imageHeight: [480, 380, 580][i],
+          }))} />
         </div>
       </section>
     </main>

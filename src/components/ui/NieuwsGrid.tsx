@@ -6,6 +6,7 @@ export type NieuwsItem = {
   titel: string;
   datum: string;
   image: string;
+  imageHeight?: number;
 };
 
 export const nieuwsData: NieuwsItem[] = [
@@ -22,7 +23,7 @@ export default function NieuwsGrid({ items = nieuwsData.slice(0, 3) }: { items?:
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {items.map((n) => (
         <Link key={n.slug} href={`/nieuws/${n.slug}`} className="group">
-          <div className="relative h-40 md:h-52 overflow-hidden mb-4">
+          <div className="relative overflow-hidden mb-4" style={{height: n.imageHeight ? `${n.imageHeight}px` : undefined}} >
             <Image
               src={n.image}
               alt={n.titel}
