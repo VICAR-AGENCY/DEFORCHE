@@ -18,11 +18,19 @@ export type Case = {
   order: number;
 };
 
+export type NieuwsSection = {
+  titel: string;
+  tekst: string;
+};
+
 export type NieuwsItem = {
   slug: string;
   titel: string;
   datum: string;
   image: string;
+  intro?: string;
+  anchors?: string[];
+  sections?: NieuwsSection[];
   body: string;
 };
 

@@ -23,7 +23,7 @@ export default function NieuwsDetailPage({
 
   return (
     <main>
-      {/* ── HERO ── */}
+      {/* ── HERO: foto links, tekst rechts ── */}
       <section className="px-6">
         <div className="grid md:grid-cols-2 max-w-7xl mx-auto gap-6 md:gap-12 items-center">
           <div className="relative h-56 md:h-80">
@@ -33,10 +33,14 @@ export default function NieuwsDetailPage({
             <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
               <Bliksem className="text-(--color-primary)" /> Nieuws
             </p>
-            <p className="text-xs text-(--color-gray-text) mb-2">{item.datum}</p>
             <h1 className="font-bold text-(--color-dark) leading-snug mb-4">
               {item.titel}
             </h1>
+            {item.intro && (
+              <p className="text-(--color-gray-text) text-sm leading-relaxed mb-6">
+                {item.intro}
+              </p>
+            )}
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 border border-(--color-dark) text-(--color-dark) font-bold text-sm px-5 py-2.5 hover:bg-(--color-gray-light) transition-colors"
@@ -47,14 +51,42 @@ export default function NieuwsDetailPage({
         </div>
       </section>
 
-      {/* ── ARTIKEL CONTENT ── */}
-      <section className="px-6">
-        <div className="max-w-2xl mx-auto">
-          <div className="prose prose-sm max-w-none text-(--color-gray-text) leading-relaxed whitespace-pre-wrap">
-            {item.body}
+      {/* ── SIDEBAR + SECTIES ── */}
+      {item.sections && item.sections.length > 0 && (
+        <section className="px-6">
+          <div className="max-w-7xl mx-auto flex gap-8 md:gap-16 items-start">
+            {/* Sticky sidebar */}
+            {item.anchors && item.anchors.length > 0 && (
+              <aside className="hidden md:flex flex-col w-48 shrink-0 sticky top-[calc(50vh-150px)] self-start">
+                {item.anchors.map((anchor) => (
+                  <a
+                    key={anchor}
+                    href={`#anchor-${anchor.toLowerCase().replace(/ /g, "-")}`}
+                    className="flex items-start gap-2 py-3 text-sm text-[#C0C0C0] hover:text-(--color-dark) transition-colors"
+                  >
+                    <Bliksem className="mt-0.5 shrink-0 text-[#C0C0C0]" />
+                    {anchor}
+                  </a>
+                ))}
+              </aside>
+            )}
+
+            {/* Artikel secties */}
+            <div className="flex flex-col flex-1">
+              {item.sections.map((s, i) => (
+                <div
+                  key={i}
+                  id={`anchor-${item.anchors?.[i]?.toLowerCase().replace(/ /g, "-") ?? i}`}
+                  className="border-t border-[#D0D0D0] py-10"
+                >
+                  <h2 className="font-bold text-(--color-dark) leading-snug mb-4">{s.titel}</h2>
+                  <p className="text-(--color-gray-text) text-sm leading-relaxed">{s.tekst}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </main>
   );
 }
