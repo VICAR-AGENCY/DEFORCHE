@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import NieuwsGrid, { nieuwsData } from "@/components/ui/NieuwsGrid";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Bliksem = ({ className = "" }: { className?: string }) => (
   <svg width="10" height="14" viewBox="0 0 10 14" fill="none" className={className}>
@@ -46,6 +46,27 @@ const diensten = [
 
 export default function DienstenPage() {
   const [activeId, setActiveId] = useState<string>(diensten[0].id);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px" }
+    );
+
+    diensten.forEach((d) => {
+      const el = document.getElementById(d.id);
+      if (el) observerRef.current?.observe(el);
+    });
+
+    return () => observerRef.current?.disconnect();
+  }, []);
 
   return (
     <main>
@@ -82,7 +103,7 @@ export default function DienstenPage() {
       </section>
 
       {/* ── DIENSTEN met sticky sidebar ── */}
-      <section className="bg-(--color-gray-light) px-6">
+      <section className="bg-white px-6">
         <div className="max-w-7xl mx-auto flex gap-8 md:gap-12">
           {/* Sticky sidebar — alleen op md+ */}
           <aside className="hidden md:flex flex-col gap-1 w-56 shrink-0">
