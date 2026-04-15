@@ -41,7 +41,7 @@ export default function DienstenGrid() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[15px]">
         {diensten.map((d) => (
           <div key={d.titel} className="bg-[#f4f4f4] p-6 flex flex-col gap-3 rounded-[10px]">
-            <h3 className="font-bold text-(--color-dark) text-sm leading-snug flex items-start">
+            <h3 className="font-bold text-(--color-dark) text-[24px] leading-snug flex items-start">
               <Bliksem />
               {d.titel}
             </h3>
