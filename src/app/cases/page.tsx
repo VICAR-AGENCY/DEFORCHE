@@ -56,7 +56,7 @@ export default function CasesPage() {
               <Image src={c.image} alt={c.titel} fill className="object-cover" />
               {c.logo && (
                 <div className="absolute top-4 left-4 bg-white px-3 py-2" style={{ borderRadius: "5px" }}>
-                  <Image src={c.logo} alt={c.bedrijf} width={100} height={32} className="object-contain" style={{ borderRadius: 0 }} />
+                  <Image src={c.logo} alt={c.bedrijf} width={30} height={30} className="object-contain" style={{ borderRadius: 0 }} />
                 </div>
               )}
             </div>
