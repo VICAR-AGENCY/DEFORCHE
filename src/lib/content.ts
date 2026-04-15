@@ -16,6 +16,7 @@ export type Case = {
   uitdaging: string;
   oplossing: string;
   image: string;
+  logo?: string;
   order: number;
 };
 
