@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-white sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-[30px]">
         <Link href="/" className="flex-shrink-0" onClick={() => setOpen(false)}>
           <Image
             src="/logo.svg"
