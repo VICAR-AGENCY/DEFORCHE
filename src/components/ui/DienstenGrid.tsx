@@ -24,7 +24,7 @@ export default function DienstenGrid() {
         ))}
 
         {/* Gele cel */}
-        <div className="relative p-6 flex flex-col items-start justify-between gap-4 rounded-[10px] h-[260px] overflow-hidden" style={{backgroundColor: "#F3EA0F"}}>
+        <div className="relative p-6 flex flex-col items-center justify-center gap-4 rounded-[10px] h-[260px] overflow-hidden" style={{backgroundColor: "#F3EA0F"}}>
           {/* Grote bliksem overlay */}
           <svg
             viewBox="0 0 10 14"
@@ -34,10 +34,7 @@ export default function DienstenGrid() {
           >
             <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor"/>
           </svg>
-          <Image src="/logo.svg" alt="Deforche" width={110} height={36} className="relative z-10" />
-          <Link href="/contact" className="relative z-10 inline-flex items-center gap-1.5 border border-(--color-dark) text-(--color-dark) text-xs font-bold px-3 py-2 hover:bg-black/10 transition-colors rounded-[4px]">
-            Offerte aanvragen
-          </Link>
+          <Image src="/logo.svg" alt="Deforche" width={250} height={82} className="relative z-10 brightness-0" />
         </div>
       </div>
     </div>
