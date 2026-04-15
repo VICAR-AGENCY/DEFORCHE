@@ -21,7 +21,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-[24px] text-(--color-dark)">
+        <nav className="hidden md:flex items-center gap-8 text-[20px] text-(--color-dark)">
           <Link href="/diensten" className="hover:opacity-70 transition-opacity">diensten</Link>
           <Link href="/over-ons" className="hover:opacity-70 transition-opacity">over ons</Link>
           <Link href="/cases" className="hover:opacity-70 transition-opacity">cases</Link>
@@ -34,7 +34,7 @@ export default function Navbar() {
             className="flex items-center gap-1.5 bg-(--color-primary) text-(--color-dark) text-sm font-semibold px-4 py-2 hover:bg-(--color-primary-hover) transition-colors"
           >
             <svg width="10" height="14" viewBox="0 0 10 14" fill="none">
-              <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor"/>
+              <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor" />
             </svg>
             Contact
           </Link>
@@ -66,7 +66,7 @@ export default function Navbar() {
               className="inline-flex items-center gap-2 bg-(--color-primary) text-(--color-dark) font-bold text-sm px-5 py-2.5 self-start mt-2"
             >
               <svg width="10" height="14" viewBox="0 0 10 14" fill="none">
-                <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor"/>
+                <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor" />
               </svg>
               Contact
             </Link>
