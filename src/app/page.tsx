@@ -7,10 +7,10 @@ import DienstenGrid from "@/components/ui/DienstenGrid";
 
 export const metadata: Metadata = {
   title: "Precision in every connection",
-  description: "Van industriële elektriciteit tot hoogspanning en automatisatie — Deforche Schakeltechniek ontwerpt, bouwt en installeert betrouwbare systemen voor kritische omgevingen.",
+  description: "Van industriële elektriciteit tot hoogspanning en bordenbouw — Deforche Schakeltechniek verzorgt alles in eigen huis.",
   openGraph: {
     title: "Deforche Schakeltechniek",
-    description: "Van industriële elektriciteit tot hoogspanning en automatisatie — Deforche Schakeltechniek ontwerpt, bouwt en installeert betrouwbare systemen voor kritische omgevingen.",
+    description: "Van industriële elektriciteit tot hoogspanning en bordenbouw — Deforche Schakeltechniek verzorgt alles in eigen huis.",
     url: "/",
   },
 };
