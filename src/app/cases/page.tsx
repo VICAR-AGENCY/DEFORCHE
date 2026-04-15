@@ -54,16 +54,17 @@ export default function CasesPage() {
           <div className="grid md:grid-cols-2 max-w-7xl mx-auto gap-6 md:gap-12 items-start">
             <div className="relative h-56 md:h-80">
               <Image src={c.image} alt={c.titel} fill className="object-cover" />
+              {c.logo && (
+                <div className="absolute top-4 left-4 bg-white px-3 py-2" style={{ borderRadius: "5px" }}>
+                  <Image src={c.logo} alt={c.bedrijf} width={100} height={32} className="object-contain" style={{ borderRadius: 0 }} />
+                </div>
+              )}
             </div>
             <div>
               <div className="mb-3">
-                {c.logo ? (
-                  <Image src={c.logo} alt={c.bedrijf} width={120} height={40} className="object-contain" style={{ borderRadius: 0 }} />
-                ) : (
-                  <p className="text-xs font-bold text-(--color-gray-text) flex items-center gap-1.5">
-                    <Bliksem className="text-(--color-primary)" /> {c.bedrijf}
-                  </p>
-                )}
+                <p className="text-xs font-bold text-(--color-gray-text) flex items-center gap-1.5">
+                  <Bliksem className="text-(--color-primary)" /> {c.bedrijf}
+                </p>
               </div>
               <h2 className="font-bold text-(--color-dark) leading-snug mb-2">
                 {c.titel}
