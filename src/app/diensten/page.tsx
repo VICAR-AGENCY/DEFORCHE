@@ -19,9 +19,19 @@ export default function DienstenPage() {
             <div className="relative h-56 md:h-80">
               <Image src="/images/Rectangle 8687-1.png" alt="Deforche diensten" fill className="object-cover" priority />
             </div>
-            <div className="flex items-center gap-3 mt-4 text-sm text-(--color-gray-text)">
+            <div className="flex items-center gap-[15px] mt-4 text-sm text-(--color-gray-text)">
               <span>Vertrouwd door +50 klanten</span>
-              <Image src="/images/Frame 1000005822.png" alt="Klant logos" width={60} height={24} className="object-contain" />
+              <div className="flex items-center">
+                <div className="relative w-[30px] h-[30px] z-30">
+                  <Image src="/images/Group 1000004366.png" alt="Klant logo 1" fill className="object-contain" />
+                </div>
+                <div className="relative w-[30px] h-[30px] -ml-2 z-20">
+                  <Image src="/images/Group 1000004367.png" alt="Klant logo 2" fill className="object-contain" />
+                </div>
+                <div className="relative w-[30px] h-[30px] -ml-2 z-10">
+                  <Image src="/images/Group 1000004368.png" alt="Klant logo 3" fill className="object-contain" />
+                </div>
+              </div>
             </div>
           </div>
           <div>
