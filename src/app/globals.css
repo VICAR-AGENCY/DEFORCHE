@@ -120,13 +120,13 @@ a[class*="bg-"], button {
   }
 }
 
-/* ── Hover: afbeeldingen licht inzoomen ── */
-.overflow-hidden img,
-.overflow-hidden > span > img {
+/* ── Hover: afbeeldingen licht inzoomen (alleen klikbare containers) ── */
+a .overflow-hidden img,
+a .overflow-hidden > span > img {
   transition: transform 0.5s ease;
 }
-.overflow-hidden:hover img,
-.overflow-hidden:hover > span > img {
+a:hover .overflow-hidden img,
+a:hover .overflow-hidden > span > img {
   transform: scale(1.03);
 }
 
