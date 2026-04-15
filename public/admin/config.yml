@@ -26,6 +26,18 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Titel", name: "titel", widget: "string" }
-      - { label: "Datum", name: "datum", widget: "string", hint: "bv. Zat 10 feb" }
+      - { label: "Datum", name: "datum", widget: "string", hint: "bv. Vrij 20 jun" }
       - { label: "Afbeelding", name: "image", widget: "image" }
-      - { label: "Inhoud", name: "body", widget: "markdown" }
+      - { label: "Intro", name: "intro", widget: "text", required: false }
+      - label: "Ankers (sidebar)"
+        name: "anchors"
+        widget: "list"
+        required: false
+        field: { label: "Ankertitel", name: "item", widget: "string" }
+      - label: "Secties"
+        name: "sections"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Titel", name: "titel", widget: "string" }
+          - { label: "Tekst", name: "tekst", widget: "text" }
