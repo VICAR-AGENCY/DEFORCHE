@@ -86,7 +86,8 @@ img {
 }
 
 /* Logo geen radius */
-header img {
+header img,
+img[alt="Deforche"] {
   border-radius: 0;
 }
 
