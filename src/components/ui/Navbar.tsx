@@ -8,9 +8,25 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-white sticky top-0 z-50" style={{borderBottom: "0.5px solid #D0D0D0"}}>
-      <div className="max-w-7xl mx-auto flex items-center justify-between py-[30px]">
-        <Link href="/" className="flex-shrink-0" onClick={() => setOpen(false)}>
+    <header className="bg-white sticky top-0 z-50 relative" style={{borderBottom: "0.5px solid #D0D0D0"}}>
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between py-[30px]">
+
+        {/* Mobile: Contact links | Desktop: logo links */}
+        <div className="flex items-center">
+          {/* Contact knop — mobile links, desktop verborgen */}
+          <Link
+            href="/contact"
+            className="md:hidden flex items-center gap-1.5 bg-(--color-primary) text-(--color-dark) text-sm font-semibold px-4 py-2 hover:bg-(--color-primary-hover) transition-colors"
+          >
+            <svg width="10" height="14" viewBox="0 0 10 14" fill="none">
+              <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor" />
+            </svg>
+            Contact
+          </Link>
+        </div>
+
+        {/* Logo — gecentreerd op mobile, links op desktop */}
+        <Link href="/" className="md:absolute md:static absolute left-1/2 -translate-x-1/2 md:translate-x-0 flex-shrink-0" onClick={() => setOpen(false)}>
           <Image
             src="/logo.svg"
             alt="Deforche Schakeltechniek"
@@ -29,9 +45,10 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-3">
+          {/* Contact knop — desktop rechts */}
           <Link
             href="/contact"
-            className="flex items-center gap-1.5 bg-(--color-primary) text-(--color-dark) text-sm font-semibold px-4 py-2 hover:bg-(--color-primary-hover) transition-colors"
+            className="hidden md:flex items-center gap-1.5 bg-(--color-primary) text-(--color-dark) text-sm font-semibold px-4 py-2 hover:bg-(--color-primary-hover) transition-colors"
           >
             <svg width="10" height="14" viewBox="0 0 10 14" fill="none">
               <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor" />
@@ -39,7 +56,7 @@ export default function Navbar() {
             Contact
           </Link>
 
-          {/* Hamburger */}
+          {/* Hamburger — mobile rechts */}
           <button
             className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
             onClick={() => setOpen(!open)}
