@@ -44,7 +44,7 @@ export default function OverOnsPage() {
               Bij Deforche Schakeltechniek draait alles om pure kennis, sterke connecties en jarenlange ervaring in onze sector. Wij verzorgen hardware engineering, bordenbouw en de volledige installatie van hoogspanning. Met onze zaakvoerder als kort aanspreekpunt houden we de lijnen altijd direct. Kastenbouw is bij ons nog echt handenarbeid. We hebben werkelijk alles in huis.
             </p>
           </div>
-          <div className="relative h-56 md:h-80">
+          <div className="relative h-56 md:h-[500px]">
             <Image src="/images/Rectangle 8687.png" alt="Team Deforche" fill className="object-cover" />
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function OverOnsPage() {
       {/* ── VCA ── */}
       <section className="px-6">
         <div className="grid md:grid-cols-2 max-w-7xl mx-auto gap-6 md:gap-12 items-center">
-          <div className="bg-(--color-gray-light) flex items-center justify-center h-56 md:h-72">
+          <div className="bg-(--color-gray-light) flex items-center justify-center h-56 md:h-[500px]">
             <Image
               src="/images/image 935.png"
               alt="VCA certificaat"
