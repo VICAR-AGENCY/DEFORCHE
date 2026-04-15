@@ -18,11 +18,18 @@ export default function ContactForm() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch("/contact-netlify-form.html", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          voornaam: data.get("voornaam"),
+          achternaam: data.get("achternaam"),
+          email: data.get("email"),
+          telefoon: data.get("telefoon"),
+          bericht: data.get("bericht"),
+        }),
       });
+
       if (res.ok) {
         setStatus("success");
         form.reset();
@@ -35,17 +42,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form
-      name="contact"
-      action="/contact"
-      method="POST"
-      data-netlify="true"
-      onSubmit={handleSubmit}
-      className="flex flex-col gap-5"
-    >
-      {/* Netlify vereist dit hidden veld */}
-      <input type="hidden" name="form-name" value="contact" />
-
+    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="flex flex-col gap-1">
           <label className="text-sm font-semibold text-(--color-dark)">Voornaam</label>
