@@ -107,19 +107,19 @@ export default function DienstenPage() {
         <div className="max-w-7xl mx-auto flex gap-8 md:gap-12">
           {/* Sticky sidebar — alleen op md+ */}
           <aside className="hidden md:flex flex-col gap-1 w-56 shrink-0">
-            <div className="sticky top-24">
+            <div className="sticky top-1/2 -translate-y-1/2">
               {diensten.map((d) => (
                 <a
                   key={d.id}
                   href={`#${d.id}`}
                   onClick={() => setActiveId(d.id)}
-                  className={`flex items-start gap-2 py-3 px-4 text-sm font-semibold transition-colors border-l-2 ${
+                  className={`flex items-start gap-2 py-3 px-4 text-sm font-semibold transition-colors ${
                     activeId === d.id
-                      ? "border-(--color-primary) text-(--color-dark) bg-white"
-                      : "border-transparent text-(--color-gray-text) hover:text-(--color-dark)"
+                      ? "text-(--color-dark)"
+                      : "text-[#C0C0C0] hover:text-(--color-dark)"
                   }`}
                 >
-                  <Bliksem className={`mt-0.5 shrink-0 ${activeId === d.id ? "text-(--color-primary)" : "text-(--color-gray-text)"}`} />
+                  <Bliksem className={`mt-0.5 shrink-0 ${activeId === d.id ? "text-(--color-primary)" : "text-[#C0C0C0]"}`} />
                   {d.titel}
                 </a>
               ))}
