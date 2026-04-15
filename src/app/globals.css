@@ -85,6 +85,11 @@ img {
   border-radius: 10px;
 }
 
+/* Logo geen radius */
+header img {
+  border-radius: 0;
+}
+
 .overflow-hidden {
   border-radius: 10px;
 }
