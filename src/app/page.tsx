@@ -45,16 +45,16 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="flex items-center justify-between py-4 text-sm text-(--color-gray-text)">
-            <span className="text-left text-lg">Vertrouwd door +50 klanten</span>
+          <div className="flex items-center justify-center gap-[15px] py-4 text-sm text-(--color-gray-text)">
+            <span>Vertrouwd door +50 klanten</span>
             <div className="flex items-center">
-              <div className="relative w-16 h-16 z-30">
+              <div className="relative w-[30px] h-[30px] z-30">
                 <Image src="/images/Group 1000004366.png" alt="Klant logo 1" fill className="object-contain" />
               </div>
-              <div className="relative w-16 h-16 -ml-4 z-20">
+              <div className="relative w-[30px] h-[30px] -ml-2 z-20">
                 <Image src="/images/Group 1000004367.png" alt="Klant logo 2" fill className="object-contain" />
               </div>
-              <div className="relative w-16 h-16 -ml-4 z-10">
+              <div className="relative w-[30px] h-[30px] -ml-2 z-10">
                 <Image src="/images/Group 1000004368.png" alt="Klant logo 3" fill className="object-contain" />
               </div>
             </div>
