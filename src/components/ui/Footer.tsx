@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="text-white relative overflow-hidden" style={{background: "linear-gradient(to bottom, #ffffff, #373737)"}}>
       {/* CTA Banner */}
-      <div className="max-w-7xl mx-auto px-6 pt-[200px]">
+      <div className="max-w-7xl mx-auto px-6 pt-[100px]">
         <div
           className="relative p-10 flex items-center justify-center rounded-[10px] overflow-hidden min-h-[200px]"
           style={{backgroundColor: "#F3EA0F"}}
@@ -86,7 +86,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10 max-w-7xl mx-auto px-6 py-[200px] flex flex-wrap gap-4 items-center justify-between text-xs text-white">
+      <div className="border-t border-white/10 max-w-7xl mx-auto px-6 pt-[200px] pb-8 flex flex-wrap gap-4 items-center justify-between text-xs text-white">
         <div className="flex gap-4">
           <Link href="#" className="hover:opacity-70 transition-opacity">Privacy policy</Link>
           <Link href="#" className="hover:opacity-70 transition-opacity">Cookie policy</Link>
