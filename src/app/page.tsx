@@ -69,7 +69,7 @@ export default function Home() {
               Leer ons kennen
             </Link>
           </div>
-          <div className="relative h-56 md:h-80">
+          <div className="relative h-56 md:h-[550px]">
             <Image src="/images/Rectangle 8687.png" alt="Team Deforche" fill className="object-cover" />
           </div>
         </div>
