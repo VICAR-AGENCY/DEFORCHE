@@ -13,12 +13,13 @@ export function generateStaticParams() {
   return getNieuws().map((item) => ({ slug: item.slug }));
 }
 
-export default function NieuwsDetailPage({
+export default async function NieuwsDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const item = getNieuwsBySlug(params.slug);
+  const { slug } = await params;
+  const item = getNieuwsBySlug(slug);
   if (!item) notFound();
 
   return (
