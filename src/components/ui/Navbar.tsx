@@ -21,7 +21,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm text-(--color-dark)">
+        <nav className="hidden md:flex items-center gap-8 text-[24px] text-(--color-dark)">
           <Link href="/diensten" className="hover:opacity-70 transition-opacity">diensten</Link>
           <Link href="/over-ons" className="hover:opacity-70 transition-opacity">over ons</Link>
           <Link href="/cases" className="hover:opacity-70 transition-opacity">cases</Link>
