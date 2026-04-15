@@ -83,7 +83,7 @@ export default function Home() {
       {/* ── CASES ── */}
       <section className="px-6">
         <div className="grid md:grid-cols-2 max-w-7xl mx-auto gap-6 md:gap-12 items-center">
-          <div className="relative h-56 md:h-96">
+          <div className="relative h-56 md:h-[500px]">
             <Image src="/images/Rectangle 8700.png" alt="Deforche case referentie" fill className="object-cover" />
             <div className="absolute bottom-4 left-4 flex gap-2">
               <button className="w-8 h-8 bg-white/80 flex items-center justify-center text-sm font-bold hover:bg-white transition-colors">←</button>
