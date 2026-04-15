@@ -13,7 +13,7 @@ export default function Footer() {
       {/* CTA Banner */}
       <div className="max-w-7xl mx-auto px-6 pt-12">
         <div
-          className="relative p-10 flex flex-col items-start justify-between gap-6 rounded-[10px] overflow-hidden"
+          className="relative p-10 flex items-center justify-center rounded-[10px] overflow-hidden min-h-[200px]"
           style={{backgroundColor: "#F3EA0F"}}
         >
           {/* Large lightning overlay */}
@@ -25,16 +25,10 @@ export default function Footer() {
           >
             <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor"/>
           </svg>
-          <h2 className="relative z-10 font-bold text-(--color-dark) leading-snug max-w-xl">
+          <h2 className="relative z-10 font-bold text-(--color-dark) leading-snug text-center w-full">
             Precision in every connection,<br />
             because every detail matters
           </h2>
-          <Link href="/contact" className="relative z-10 inline-flex items-center gap-1.5 border border-(--color-dark) text-(--color-dark) text-sm font-bold px-4 py-2.5 hover:bg-black/10 transition-colors rounded-[4px]">
-            <svg width="10" height="14" viewBox="0 0 10 14" fill="none">
-              <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor"/>
-            </svg>
-            Offerte aanvragen
-          </Link>
         </div>
       </div>
 
