@@ -11,7 +11,7 @@ const diensten = [
 
 export default function DienstenGrid() {
   return (
-    <div className="max-w-7xl mx-auto px-6">
+    <div className="max-w-7xl mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[15px]">
         {diensten.map((d, i) => (
           <div key={i} className="bg-[#f4f4f4] p-6 flex flex-col gap-3 rounded-[10px] h-[260px]">
