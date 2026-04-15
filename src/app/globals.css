@@ -99,3 +99,66 @@ img[alt="Deforche"] {
 a[class*="bg-"], button {
   border-radius: 4px;
 }
+
+/* ── Scroll-in animatie ── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  main > section {
+    animation: fade-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 25%;
+  }
+}
+
+/* ── Hover: afbeeldingen licht inzoomen ── */
+.overflow-hidden img,
+.overflow-hidden > span > img {
+  transition: transform 0.5s ease;
+}
+.overflow-hidden:hover img,
+.overflow-hidden:hover > span > img {
+  transform: scale(1.03);
+}
+
+/* ── Hover: links met underline-groei ── */
+nav a,
+footer a {
+  position: relative;
+}
+nav a::after,
+footer a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.25s ease;
+}
+nav a:hover::after,
+footer a:hover::after {
+  width: 100%;
+}
+
+/* ── Hover: knoppen lichte lift ── */
+a[class*="bg-"],
+a[class*="border"],
+button {
+  transition: transform 0.15s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+a[class*="bg-"]:hover,
+a[class*="border"]:hover,
+button:hover {
+  transform: translateY(-1px);
+}
