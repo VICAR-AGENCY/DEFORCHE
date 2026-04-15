@@ -104,10 +104,10 @@ export default function DienstenPage() {
 
       {/* ── DIENSTEN met sticky sidebar ── */}
       <section className="bg-white px-6">
-        <div className="max-w-7xl mx-auto flex gap-8 md:gap-12">
+        <div className="max-w-7xl mx-auto flex gap-8 md:gap-12 items-start">
           {/* Sticky sidebar — alleen op md+ */}
-          <aside className="hidden md:flex flex-col gap-1 w-56 shrink-0">
-            <div className="sticky top-1/2 -translate-y-1/2">
+          <aside className="hidden md:flex flex-col gap-1 w-56 shrink-0 sticky top-[calc(50vh-200px)] self-start">
+            <div>
               {diensten.map((d) => (
                 <a
                   key={d.id}
