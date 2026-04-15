@@ -9,15 +9,32 @@ const Bliksem = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a1a1a] text-white relative overflow-hidden">
+    <footer className="text-white relative overflow-hidden" style={{background: "linear-gradient(to bottom, #ffffff, #373737)"}}>
       {/* CTA Banner */}
-      <div className="relative overflow-hidden">
-        <div className="bg-(--color-primary) mx-6 my-0 py-10 px-8 relative">
-          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-[#1a1a1a]" style={{clipPath: "polygon(40% 0, 100% 0, 100% 100%, 0% 100%)"}} />
-          <p className="text-center text-lg md:text-2xl font-bold text-(--color-dark) relative z-10">
+      <div className="max-w-7xl mx-auto px-6 pt-12">
+        <div
+          className="relative p-10 flex flex-col items-start justify-between gap-6 rounded-[10px] overflow-hidden"
+          style={{backgroundColor: "#F3EA0F"}}
+        >
+          {/* Large lightning overlay */}
+          <svg
+            viewBox="0 0 10 14"
+            fill="none"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[800px] w-auto"
+            style={{color: "#FAF235"}}
+          >
+            <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor"/>
+          </svg>
+          <h2 className="relative z-10 font-bold text-(--color-dark) leading-snug max-w-xl">
             Precision in every connection,<br />
             because every detail matters
-          </p>
+          </h2>
+          <Link href="/contact" className="relative z-10 inline-flex items-center gap-1.5 border border-(--color-dark) text-(--color-dark) text-sm font-bold px-4 py-2.5 hover:bg-black/10 transition-colors rounded-[4px]">
+            <svg width="10" height="14" viewBox="0 0 10 14" fill="none">
+              <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor"/>
+            </svg>
+            Offerte aanvragen
+          </Link>
         </div>
       </div>
 
