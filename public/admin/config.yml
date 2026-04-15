@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: "cases"
+    label: "Cases"
+    folder: "content/cases"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Bedrijf", name: "bedrijf", widget: "string" }
+      - { label: "Titel", name: "titel", widget: "string" }
+      - { label: "Uitdaging", name: "uitdaging", widget: "text" }
+      - { label: "Oplossing", name: "oplossing", widget: "text" }
+      - { label: "Afbeelding", name: "image", widget: "image" }
+      - { label: "Volgorde", name: "order", widget: "number", default: 0 }
+
+  - name: "nieuws"
+    label: "Nieuws"
+    folder: "content/nieuws"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titel", name: "titel", widget: "string" }
+      - { label: "Datum", name: "datum", widget: "string", hint: "bv. Zat 10 feb" }
+      - { label: "Afbeelding", name: "image", widget: "image" }
+      - { label: "Inhoud", name: "body", widget: "markdown" }

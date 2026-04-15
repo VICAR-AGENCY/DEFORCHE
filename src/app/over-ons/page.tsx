@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import NieuwsGrid, { nieuwsData } from "@/components/ui/NieuwsGrid";
+import NieuwsGrid from "@/components/ui/NieuwsGrid";
+import { getNieuws } from "@/lib/content";
 
 const Bliksem = ({ className = "" }: { className?: string }) => (
   <svg width="10" height="14" viewBox="0 0 10 14" fill="none" className={className}>
@@ -92,7 +93,7 @@ export default function OverOnsPage() {
           <p className="text-(--color-gray-text) text-sm mb-8">
             Blijf op de hoogte van onze nieuwste projecten, innovaties en de strafste cases uit ons atelier.
           </p>
-          <NieuwsGrid items={nieuwsData.slice(0, 3)} />
+          <NieuwsGrid items={getNieuws().slice(0, 3)} />
         </div>
       </section>
     </main>

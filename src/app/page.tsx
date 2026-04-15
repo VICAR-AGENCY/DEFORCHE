@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import NieuwsGrid, { nieuwsData } from "@/components/ui/NieuwsGrid";
+import NieuwsGrid from "@/components/ui/NieuwsGrid";
+import { getNieuws } from "@/lib/content";
 import DienstenGrid from "@/components/ui/DienstenGrid";
 
 const Bliksem = ({ className = "" }: { className?: string }) => (
@@ -137,7 +138,7 @@ export default function Home() {
               Meer nieuws
             </Link>
           </p>
-          <NieuwsGrid items={nieuwsData.slice(0, 3).map((item, i) => ({
+          <NieuwsGrid items={getNieuws().slice(0, 3).map((item, i: number) => ({
             ...item,
             imageHeight: [480, 380, 580][i],
           }))} />

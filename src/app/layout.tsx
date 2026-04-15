@@ -15,6 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl" className="h-full antialiased">
+      <head>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" async></script>
+      </head>
       <body className="min-h-full flex flex-col">
         <Navbar />
         <div className="flex-1">{children}</div>

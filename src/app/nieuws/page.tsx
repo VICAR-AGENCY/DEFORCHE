@@ -1,4 +1,5 @@
-import NieuwsGrid, { nieuwsData } from "@/components/ui/NieuwsGrid";
+import NieuwsGrid from "@/components/ui/NieuwsGrid";
+import { getNieuws } from "@/lib/content";
 
 const Bliksem = ({ className = "" }: { className?: string }) => (
   <svg width="10" height="14" viewBox="0 0 10 14" fill="none" className={className}>
@@ -7,6 +8,8 @@ const Bliksem = ({ className = "" }: { className?: string }) => (
 );
 
 export default function NieuwsPage() {
+  const nieuws = getNieuws();
+
   return (
     <main>
       {/* ── HEADER ── */}
@@ -19,10 +22,10 @@ export default function NieuwsPage() {
         </div>
       </section>
 
-      {/* ── GRID ── 3-koloms, 2 rijen = 6 artikels */}
+      {/* ── GRID ── */}
       <section className="px-6">
         <div className="max-w-7xl mx-auto">
-          <NieuwsGrid items={nieuwsData} />
+          <NieuwsGrid items={nieuws} />
         </div>
       </section>
     </main>
