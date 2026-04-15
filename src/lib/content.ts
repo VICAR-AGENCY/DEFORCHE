@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+
 function getFiles(dir: string) {
   const folder = path.join(process.cwd(), "content", dir);
   if (!fs.existsSync(folder)) return [];
