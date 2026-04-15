@@ -1,7 +1,7 @@
 ---
 titel: "Alles onder één dak: Van Eplan-ontwerp tot indienststelling"
 datum: Vrij 20 jun
-image: /images/uploads/abstract_yellow-33-3.png
+image: /images/uploads/rectangle-8688.png
 intro: Wat maakt Deforche Schakeltechniek anders? Wij nemen een project volledig
   in eigen handen — van het eerste Eplan-ontwerp tot de definitieve
   indienststelling. Geen uitbesteding, geen afhankelijkheid van derden. Alles
