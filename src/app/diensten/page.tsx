@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import NieuwsSection from "@/components/ui/NieuwsSection";
 import DienstenSidebar from "@/components/ui/DienstenSidebar";
+
+export const metadata: Metadata = {
+  title: "Onze diensten",
+  description: "Hardware engineering, bordenbouw, hoogspanning installatie, testing en onderhoud — alles in eigen huis bij Deforche Schakeltechniek.",
+};
 
 const Bliksem = ({ className = "" }: { className?: string }) => (
   <svg width="10" height="14" viewBox="0 0 10 14" fill="none" className={className}>

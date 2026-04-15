@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import DienstenGrid from "@/components/ui/DienstenGrid";
 import { getCases } from "@/lib/content";
 import CaseAccordion from "@/components/ui/CaseAccordion";
+
+export const metadata: Metadata = {
+  title: "Cases",
+  description: "Ontdek onze sterkste referenties: van complexe hoogspanningsinstallaties bij Vandewiele tot grote zonnepanelenprojecten.",
+};
 
 const Bliksem = ({ className = "" }: { className?: string }) => (
   <svg width="10" height="14" viewBox="0 0 10 14" fill="none" className={className}>

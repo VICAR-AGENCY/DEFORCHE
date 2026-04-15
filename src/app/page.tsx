@@ -1,8 +1,19 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import NieuwsGrid from "@/components/ui/NieuwsGrid";
 import { getNieuws } from "@/lib/content";
 import DienstenGrid from "@/components/ui/DienstenGrid";
+
+export const metadata: Metadata = {
+  title: "Precision in every connection",
+  description: "Van industriële elektriciteit tot hoogspanning en automatisatie — Deforche Schakeltechniek ontwerpt, bouwt en installeert betrouwbare systemen voor kritische omgevingen.",
+  openGraph: {
+    title: "Deforche Schakeltechniek",
+    description: "Van industriële elektriciteit tot hoogspanning en automatisatie — Deforche Schakeltechniek ontwerpt, bouwt en installeert betrouwbare systemen voor kritische omgevingen.",
+    url: "/",
+  },
+};
 
 const Bliksem = ({ className = "" }: { className?: string }) => (
   <svg width="10" height="14" viewBox="0 0 10 14" fill="none" className={className}>

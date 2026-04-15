@@ -4,8 +4,19 @@ import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 
 export const metadata: Metadata = {
-  title: "Deforche Schakeltechniek",
-  description: "Precision in every connection, because every detail matters.",
+  metadataBase: new URL("https://deforche.be"),
+  title: {
+    default: "Deforche Schakeltechniek",
+    template: "%s | Deforche Schakeltechniek",
+  },
+  description: "Van hardware engineering tot hoogspanning en bordenbouw — Deforche Schakeltechniek verzorgt alles in eigen huis.",
+  openGraph: {
+    siteName: "Deforche Schakeltechniek",
+    locale: "nl_BE",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({

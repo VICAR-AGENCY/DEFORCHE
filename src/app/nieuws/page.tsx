@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getNieuws } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: "Nieuws",
+  description: "Blijf op de hoogte van de nieuwste projecten, innovaties en cases van Deforche Schakeltechniek.",
+};
 
 const Bliksem = ({ className = "" }: { className?: string }) => (
   <svg width="10" height="14" viewBox="0 0 10 14" fill="none" className={className}>

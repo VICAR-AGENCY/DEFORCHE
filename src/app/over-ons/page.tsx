@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import NieuwsGrid from "@/components/ui/NieuwsGrid";
 import { getNieuws } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: "Over ons",
+  description: "Ontdek wie Deforche Schakeltechniek is: VCA gecertificeerd, jarenlange ervaring in industriële elektriciteit en hoogspanning.",
+};
 
 const Bliksem = ({ className = "" }: { className?: string }) => (
   <svg width="10" height="14" viewBox="0 0 10 14" fill="none" className={className}>

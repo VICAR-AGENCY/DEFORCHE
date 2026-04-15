@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import NieuwsGrid from "@/components/ui/NieuwsGrid";
 import { getNieuws } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Neem contact op met Deforche Schakeltechniek voor een offerte of vrijblijvend advies over uw elektrisch project.",
+};
 
 const Bliksem = ({ className = "" }: { className?: string }) => (
   <svg width="10" height="14" viewBox="0 0 10 14" fill="none" className={className}>

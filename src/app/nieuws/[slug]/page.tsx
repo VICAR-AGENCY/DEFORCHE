@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getNieuws, getNieuwsBySlug } from "@/lib/content";
@@ -9,6 +10,26 @@ const Bliksem = ({ className = "" }: { className?: string }) => (
     <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor"/>
   </svg>
 );
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const item = getNieuwsBySlug(slug);
+  if (!item) return {};
+  return {
+    title: item.titel,
+    description: item.intro ?? undefined,
+    openGraph: {
+      title: item.titel,
+      description: item.intro ?? undefined,
+      images: item.image ? [{ url: item.image }] : [],
+      type: "article",
+    },
+  };
+}
 
 export function generateStaticParams() {
   return getNieuws().map((item) => ({ slug: item.slug }));
