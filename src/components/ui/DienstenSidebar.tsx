@@ -90,7 +90,7 @@ export default function DienstenSidebar() {
         {/* Diensten blokken */}
         <div className="flex flex-col gap-12 md:gap-16 flex-1">
           {diensten.map((d) => (
-            <div key={d.id} id={d.id}>
+            <div key={d.id} id={d.id} style={{scrollMarginTop: "110px"}}>
               <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
                 <Bliksem className="text-(--color-primary)" /> Diensten
               </p>
