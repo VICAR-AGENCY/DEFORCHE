@@ -34,7 +34,7 @@ export default function OverOnsPage() {
       <section className="px-6">
         <div className="grid md:grid-cols-2 max-w-7xl mx-auto gap-6 md:gap-12 items-center">
           <div>
-            <p className="text-xs font-bold text-(--color-dark) mb-3 flex items-center gap-1.5">
+            <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
               <Bliksem className="text-(--color-primary)" /> Over ons
             </p>
             <h2 className="font-bold text-(--color-dark) leading-snug mb-4">
@@ -63,7 +63,7 @@ export default function OverOnsPage() {
             />
           </div>
           <div>
-            <p className="text-xs font-bold text-(--color-dark) mb-3 flex items-center gap-1.5">
+            <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
               <Bliksem className="text-(--color-primary)" /> Certificaties
             </p>
             <h2 className="font-bold text-(--color-dark) leading-snug mb-4">
@@ -85,7 +85,7 @@ export default function OverOnsPage() {
       {/* ── NIEUWS ── */}
       <section className="bg-(--color-gray-light) px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-bold text-(--color-dark) mb-3 flex items-center gap-1.5">
+          <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
             <Bliksem className="text-(--color-primary)" /> Nieuws
           </p>
           <h2 className="font-bold text-(--color-dark) mb-2">Ontdek nieuws</h2>

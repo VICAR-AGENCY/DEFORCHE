@@ -62,7 +62,7 @@ export default function DienstenPage() {
             </div>
           </div>
           <div>
-            <p className="text-xs font-bold text-(--color-dark) mb-3 flex items-center gap-1.5">
+            <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
               <Bliksem className="text-(--color-primary)" /> Onze diensten
             </p>
             <h1 className="font-bold text-(--color-dark) leading-snug mb-4">
@@ -109,7 +109,7 @@ export default function DienstenPage() {
           <div className="flex flex-col gap-12 md:gap-16 flex-1">
             {diensten.map((d) => (
               <div key={d.id} id={d.id}>
-                <p className="text-xs font-bold text-(--color-dark) mb-3 flex items-center gap-1.5">
+                <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
                   <Bliksem className="text-(--color-primary)" /> Diensten
                 </p>
                 <h2 className="font-bold text-(--color-dark) leading-snug mb-4">{d.titel}</h2>
@@ -126,7 +126,7 @@ export default function DienstenPage() {
       {/* ── NIEUWS ── */}
       <section className="px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-bold text-(--color-dark) mb-3 flex items-center gap-1.5">
+          <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
             <Bliksem className="text-(--color-primary)" /> Nieuws
           </p>
           <h2 className="font-bold text-(--color-dark) mb-8">Ontdek nieuws</h2>

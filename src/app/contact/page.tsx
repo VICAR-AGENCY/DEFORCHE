@@ -12,7 +12,7 @@ export default function ContactPage() {
       {/* ── FORMULIER + KAART ── */}
       <section className="px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-bold text-(--color-dark) mb-3 flex items-center gap-1.5">
+          <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
             <Bliksem className="text-(--color-primary)" /> Contact
           </p>
           <h1 className="font-bold text-(--color-dark) mb-10">Contacteer ons</h1>
@@ -103,7 +103,7 @@ export default function ContactPage() {
       {/* ── NIEUWS ── */}
       <section className="bg-(--color-gray-light) px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-bold text-(--color-dark) mb-3 flex items-center gap-1.5">
+          <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
             <Bliksem className="text-(--color-primary)" /> Nieuws
           </p>
           <h2 className="font-bold text-(--color-dark) mb-8">Ontdek nieuws</h2>

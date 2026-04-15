@@ -12,7 +12,7 @@ export default function NieuwsPage() {
       {/* ── HEADER ── */}
       <section className="px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-bold text-(--color-dark) mb-3 flex items-center gap-1.5">
+          <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
             <Bliksem className="text-(--color-primary)" /> Nieuws
           </p>
           <h1 className="text-2xl md:text-4xl font-bold text-(--color-dark)">Ontdek nieuws</h1>

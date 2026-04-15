@@ -182,7 +182,7 @@ export default function NieuwsDetailPage({
           <Image src={nieuwsItem.image} alt={nieuwsItem.titel} fill className="object-cover" priority />
         </div>
         <div>
-          <p className="text-xs font-bold text-(--color-dark) mb-3 flex items-center gap-1.5">
+          <p className="text-xs font-bold text-(--color-gray-text) mb-3 flex items-center gap-1.5">
             <Bliksem className="text-(--color-primary)" /> Nieuws
           </p>
           <h1 className="font-bold text-(--color-dark) leading-snug mb-4">
