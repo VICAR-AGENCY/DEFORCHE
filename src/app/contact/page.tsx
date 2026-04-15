@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import NieuwsGrid from "@/components/ui/NieuwsGrid";
 import { getNieuws } from "@/lib/content";
+import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -26,69 +27,9 @@ export default function ContactPage() {
 
           <div className="grid md:grid-cols-5 gap-8 md:gap-10">
             {/* Formulier — 60% */}
-            <form className="md:col-span-3 flex flex-col gap-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex flex-col gap-1">
-                  <label className="text-sm font-semibold text-(--color-dark)">Voornaam</label>
-                  <input
-                    type="text"
-                    placeholder="Voornaam"
-                    className="border border-(--color-gray-mid) px-4 py-3 text-sm focus:outline-none focus:border-(--color-dark) transition-colors"
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="text-sm font-semibold text-(--color-dark)">Achternaam</label>
-                  <input
-                    type="text"
-                    placeholder="Achternaam"
-                    className="border border-(--color-gray-mid) px-4 py-3 text-sm focus:outline-none focus:border-(--color-dark) transition-colors"
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex flex-col gap-1">
-                  <label className="text-sm font-semibold text-(--color-dark)">Email</label>
-                  <input
-                    type="email"
-                    placeholder="email@bedrijf.be"
-                    className="border border-(--color-gray-mid) px-4 py-3 text-sm focus:outline-none focus:border-(--color-dark) transition-colors"
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="text-sm font-semibold text-(--color-dark)">Telefoonnummer</label>
-                  <input
-                    type="tel"
-                    placeholder="+32 ..."
-                    className="border border-(--color-gray-mid) px-4 py-3 text-sm focus:outline-none focus:border-(--color-dark) transition-colors"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col gap-1">
-                <label className="text-sm font-semibold text-(--color-dark)">Bericht</label>
-                <textarea
-                  rows={5}
-                  placeholder="Hoe kunnen wij u helpen?"
-                  className="border border-(--color-gray-mid) px-4 py-3 text-sm focus:outline-none focus:border-(--color-dark) transition-colors resize-none"
-                />
-              </div>
-              <div>
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input type="checkbox" className="mt-0.5 accent-(--color-primary)" />
-                  <span className="text-sm text-(--color-gray-text)">
-                    Ik ga akkoord met de verwerking van mijn gegevens conform de privacyverklaring van Deforche Schakeltechniek.
-                  </span>
-                </label>
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  className="inline-flex items-center gap-2 bg-(--color-primary) text-(--color-dark) font-bold text-sm px-6 py-3 hover:bg-(--color-primary-hover) transition-colors"
-                >
-                  <Bliksem />
-                  Verstuur bericht
-                </button>
-              </div>
-            </form>
+            <div className="md:col-span-3">
+              <ContactForm />
+            </div>
 
             {/* Kaart — 40% */}
             <div className="md:col-span-2 h-64 md:h-auto min-h-64 overflow-hidden">
