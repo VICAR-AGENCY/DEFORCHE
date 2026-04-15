@@ -13,17 +13,7 @@ export default function Navbar() {
 
         {/* Mobile: Contact links | Desktop: logo links */}
         <div className="flex items-center">
-          {/* Contact knop — mobile links, desktop verborgen */}
-          <Link
-            href="/contact"
-            className="md:hidden flex items-center gap-1.5 bg-(--color-primary) text-(--color-dark) text-sm font-semibold px-4 py-2 hover:bg-(--color-primary-hover) transition-colors"
-          >
-            <svg width="10" height="14" viewBox="0 0 10 14" fill="none">
-              <path d="M6 0L0 8H5L4 14L10 6H5L6 0Z" fill="currentColor" />
-            </svg>
-            Contact
-          </Link>
-        </div>
+          </div>
 
         {/* Logo — gecentreerd op mobile, links op desktop */}
         <Link href="/" className="md:absolute md:static absolute left-1/2 -translate-x-1/2 md:translate-x-0 flex-shrink-0" onClick={() => setOpen(false)}>
